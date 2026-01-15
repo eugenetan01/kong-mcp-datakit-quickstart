@@ -100,7 +100,7 @@ If you have your own PostgreSQL instance:
 
 Edit [deck/deck.yaml](deck/deck.yaml) and replace the `changeme` values:
 
-1. **OpenAI API Keys** (appears in 2 locations - search for both):
+1. **OpenAI API Keys** (appears in 3 locations - search for all):
 
    ```yaml
    header_value: changeme # Replace with your actual OpenAI API key
@@ -123,7 +123,7 @@ Push your configuration to Kong:
 
 ```bash
 cd deck
-deck gateway sync deck.yaml --konnect-addr https://us.api.konghq.com --konnect-token $DECK_KONNECT_TOKEN --konnect-control-plane-name mcp-datakit-demo
+deck gateway sync deck.yaml --konnect-addr=https://us.api.konghq.com --konnect-token=$DECK_KONNECT_TOKEN --konnect-control-plane-name=mcp-datakit-demo
 ```
 
 **Success looks like:**
